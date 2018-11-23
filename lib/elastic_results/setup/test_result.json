@@ -1,0 +1,73 @@
+{
+  "mappings": {
+    "test_result": {
+      
+      "properties": {
+        "@timestamp": {
+          "type": "date",
+          "format": "dateOptionalTime"
+        },
+        "environment":{
+          "type": "text"
+        },
+        "suite_name":{
+          "type": "text"
+        },
+        "suite_type": {
+          "type": "text"
+        },
+        "outcome": {
+          "type": "text"
+        },
+        "exception_msg": {
+          "type": "text"
+        },
+        "exception_class": {
+          "type": "text"
+        },
+        "exception_stacktrace": {
+          "type": "text"
+        },
+        "runtime" : {
+          "type": "float"
+        },
+        "build_number": {
+          "type": "text"
+        },
+        "build_url": {
+          "type": "text"
+        },
+        "node_name": {
+          "type": "text"
+        },
+        "job_name": {
+          "type": "text"
+        },
+        "build_tag": {
+          "type": "text"
+        },
+        "git_commit": {
+          "type": "text"
+        },
+        "git_url": {
+          "type": "text"
+        },
+        "git_branch": {
+          "type": "text"
+        },
+        "tags": {
+          "type": "text"
+        },
+        "scenario_name": {
+          "type": "text"
+        },
+        "feature_name": {
+          "type": "text"
+        },
+        "team": {
+          "type": "text"
+        }
+      }
+    }
+  }
+}

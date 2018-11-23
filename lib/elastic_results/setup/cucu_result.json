@@ -1,0 +1,237 @@
+{
+  "mappings": {
+    "test_result": {
+
+      "properties": {
+        "@timestamp": {
+          "type": "date",
+          "format": "dateOptionalTime"
+        },
+        "environment": {
+          "type": "keyword",
+          "index": "false",
+          "null_value": "na"
+        },
+        "suite_name": {
+          "type": "keyword",
+          "null_value": "na"
+        },
+        "suite_type": {
+          "type": "keyword",
+          "index": "false",
+          "null_value": "na"
+        },
+        "team": {
+          "type": "keyword",
+          "null_value": "na"
+        },
+        "outcome": {
+          "type": "keyword",
+          "index": "false",
+          "null_value": "na"
+        },
+        "exception_msg": {
+          "type": "text"
+        },
+        "exception_class": {
+          "type": "keyword",
+          "null_value": "na"
+        },
+        "exception_stacktrace": {
+          "type": "keyword",
+          "null_value": "na"
+        },
+        "runtime": {
+          "type": "float"
+        },
+        "build_number": {
+          "type": "keyword",
+          "index": "true",
+          "null_value": "na"
+        },
+        "build_url": {
+          "type": "keyword",
+          "index": "false",
+          "null_value": "na"
+        },
+        "node_name": {
+          "type": "keyword",
+          "index": "false",
+          "null_value": "na"
+        },
+        "job_name": {
+          "type": "keyword",
+          "index": "false",
+          "null_value": "na"
+        },
+        "build_tag": {
+          "type": "keyword",
+          "index": "false",
+          "null_value": "na"
+        },
+        "git_commit": {
+          "type": "keyword",
+          "index": "false",
+          "null_value": "na"
+        },
+        "git_url": {
+          "type": "keyword",
+          "index": "false",
+          "null_value": "na"
+        },
+        "git_branch": {
+          "type": "keyword",
+          "index": "false",
+          "null_value": "na"
+        },
+        "tags": {
+          "type": "text"
+        },
+        "scenario_name": {
+          "type": "keyword",
+          "index": "false"
+        },
+        "feature_name": {
+          "type": "keyword",
+          "index": "false"
+        },
+        "uri": {
+          "type": "keyword",
+          "index": "false"
+        },
+        "id": {
+          "type": "keyword",
+          "index": "false"
+        },
+        "keyword": {
+          "type": "keyword",
+          "index": "false"
+        },
+        "name": {
+          "type": "keyword",
+          "index": "false"
+        },
+        "description": {
+          "type": "keyword",
+          "index": "false"
+        },
+        "line": {
+          "type": "keyword",
+          "index": "false"
+        },
+        "elements" : [
+          {
+            "id": {
+              "type": "keyword",
+              "index": "false"
+            },
+            "keyword": {
+              "type": "keyword",
+              "index": "false"
+            },
+            "name": {
+              "type": "keyword",
+              "index": "false"
+            },
+            "description": {
+              "type": "keyword",
+              "index": "false"
+            },
+            "line": {
+              "type": "keyword",
+              "index": "false"
+            },
+            "type": {
+              "type": "keyword",
+              "index": "false"
+            },
+            "before": [
+              {
+                "match": [
+                  {
+                    "location": {
+                      "type": "keyword",
+                      "index": "false"
+                    }
+                  }
+                ],
+                "result": [
+                  {
+                    "status": {
+                      "type": "keyword",
+                      "index": "false"
+                    },
+                    "duration": {
+                      "type": "keyword",
+                      "index": "false"
+                    }
+                  }
+                ]
+              }
+            ],
+            "steps" : [
+              {
+                "keyword": {
+                  "type": "keyword",
+                  "index": "false"
+                },
+                "name": {
+                  "type": "keyword",
+                  "index": "false"
+                },
+                "line": {
+                  "type": "keyword",
+                  "index": "false"
+                },
+                "match": [
+                  {
+                    "location": {
+                      "type": "keyword",
+                      "index": "false"
+                    }
+                  }
+                ],
+                "result": [
+                  {
+                    "status": {
+                      "type": "keyword",
+                      "index": "false"
+                    },
+                    "duration": {
+                      "type": "keyword",
+                      "index": "false"
+                    }
+                  }
+                ]
+              }
+            ],
+            "before": [
+              {
+                "match": [
+                  {
+                    "location": {
+                      "type": "keyword",
+                      "index": "false"
+                    }
+                  }
+                ],
+                "result": [
+                  {
+                    "status": {
+                      "type": "keyword",
+                      "index": "false"
+                    },
+                    "duration": {
+                      "type": "keyword",
+                      "index": "false"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

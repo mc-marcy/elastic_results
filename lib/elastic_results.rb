@@ -119,7 +119,7 @@ module ElasticResults
   ElasticResults.google_api_key    ||= ENV['GOOGLE_API_KEY']
   ElasticResults.use_unsafe_index  ||= defined?(WebMock)
   ElasticResults.es_path ||= nil
-puts ElasticResults.es_index_result
+
   private
   def self.http_client
     uri = URI.parse(ElasticResults.es_url)

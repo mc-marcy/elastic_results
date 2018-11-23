@@ -39,6 +39,8 @@ Make this the default by adding the following to config/cucumber.yml
 ```
 default: --format pretty --format ElasticResults::Cucumber::Formatter -o /dev/null
 ```
+example for windows with ENV variables
+default:  TEAM_NAME=PANNET-CTF SUITE_TYPE=e2e KIBANA_URL=https://<kibana_url> ES_HOST=http://<elastic_ip>:9200 ES_INDEX_RESULT=pannet_results-<%= Time.new.strftime('%F') %> --format ElasticResults::Cucumber::Formatter -o test.txt
 
 ### Cucumber 1.X
 Elastic results supports older versions of cucumber through the legacy formatter.

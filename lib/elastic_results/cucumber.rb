@@ -9,7 +9,7 @@ module ElasticResults
 
       def on_test_case_finished(event)
         test_case, result = *event.attributes
-		puts test_case
+
 		#old_after_feature_element test_case, result
 		#old_after_feature_element test_case, result
 

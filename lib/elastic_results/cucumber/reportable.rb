@@ -2,6 +2,7 @@ module ElasticResults
   module Cucumber
     module Reportable
       def record_scenario(feature_hash, scenario_hash)
+	  puts "OK"
         ElasticResults.index_result result_for(feature_hash, scenario_hash)
       end
 
@@ -18,7 +19,16 @@ module ElasticResults
 
           res.tags.append(scenario_hash[:tags].map { |t| t[:name] }) unless scenario_hash[:tags].nil?
           # Cucumber stores times in nanoseconds for each step, because that's SUPER useful!
-          res.runtime = scenario_hash[:steps].map { |s| s[:result][:duration] }.compact.reduce { |a, e| a + e } / 1_000_000_000.0
+          helper=0
+		  durations = scenario_hash[:steps].map { |s| s[:result][:duration] }
+		  durations.each do |duration|
+		    if !duration.nil?
+				helper+=duration
+			end
+		  end
+
+          
+		  res.runtime = helper / 1_000_000_000.0
 
           failing_step = scenario_hash[:steps].find { |step| !step[:result].nil? && [:failed, 'failed'].include?(step[:result][:status]) }
           unless failing_step.nil?
